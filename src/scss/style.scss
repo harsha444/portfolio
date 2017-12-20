@@ -1,0 +1,160 @@
+$primary: #E31B6D;
+$primary-overlay:rgba(0, 0, 0, 0.8);
+$font: Raleway;
+$black: #1B242F;
+$black2: #444649;
+$blue-light:#04C2C9;
+$blue-dark:#00A1A7;
+// body{
+//     margin-top: 105px;
+// }
+
+body{
+    font-family: 'Raleway';
+}
+
+
+// HORIZONTAL line
+
+// Section header
+.section-header{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    hr {
+        border: none;
+        height: 4px;
+        /* Set the hr color */
+        color: $black2; /* old IE */
+        background-color: $black2; /* Modern Browsers */
+        width: 4rem;
+    }
+}
+
+#home{
+    position:relative;
+    background-image: url('../img/mountains.jpg');
+    min-height:600px;
+    height: calc(100vh);
+    background-size: cover;
+    .primary-overlay{
+        background-color: $primary-overlay;
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100%;
+        .highlight{
+            color: $primary;
+        }
+        a{
+            border-width: medium;
+        }
+        .cover-head{
+            font-size: 39pt;
+            line-height: 45pt;
+            text-align: center;
+        }
+    }
+}
+
+// NAV
+.navbar{
+    // box-shadow: 2px 2px 5px $primary;
+    opacity: 0.9;
+    background: $black;
+    border-bottom: 3px solid #04C2C9;
+    .nav-item{
+        font-size: 1.4rem;
+        // padding: 0 2rem;
+        padding-left: 0.8rem;
+        a{
+            color:#fff;
+        }
+        a:hover{
+            color: $primary;
+        }
+        .nav-link.active{
+            color: $primary;
+        }
+    }
+
+}
+
+// ABOUT
+
+#about{
+        // margin-top: 75px;
+    color: $black2;
+    .sub-text{
+        font-size: 1.33rem;
+    }
+
+    .progress{
+        position: relative;
+        height: 28px;
+        max-width: 90%;
+        .progress-bar{
+            height: 100%;
+            background-color: $blue-dark;
+        }
+        .progress-type{
+            position: absolute;
+            width: 15%;
+            height: 100%;
+        	left: 0px;
+            color: #fff;
+        	background-color: $blue-light;
+            padding-top: 6px;
+            font-weight: bold;
+        }
+        .progress-completed{
+            position: absolute;
+            padding-top: 6px;
+        	right: 0px;
+        }
+    }
+
+}
+
+// Media Queries
+
+@media(max-width:576px){
+    nav .container{
+        width: 100%;
+        .nav-item{
+            font-size: 0.9rem;
+        }
+    }
+
+    #home .primary-overlay .cover-head{
+        font-size: 16pt;
+        line-height: 25pt;
+    }
+
+    #about{
+        .progress{
+            height: 22px;
+            max-width: 100%;
+        }
+
+    }
+}
+@media(max-width:576px) {
+    .section-header{
+        .heading{
+            font-size: 25pt;
+        }
+    }
+    #about{
+        img{
+            height: 220px;
+            width: 230px;
+        }
+    }
+    .label-head{
+        font-size: 14pt;
+    }
+    .label-sub{
+        font-size: 8pt;
+    }
+}

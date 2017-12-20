@@ -1,0 +1,99 @@
+body {
+  font-family: 'Raleway'; }
+
+.section-header {
+  margin-top: 5rem;
+  margin-bottom: 5rem; }
+  .section-header hr {
+    border: none;
+    height: 4px;
+    /* Set the hr color */
+    color: #444649;
+    /* old IE */
+    background-color: #444649;
+    /* Modern Browsers */
+    width: 4rem; }
+
+#home {
+  position: relative;
+  background-image: url("../img/mountains.jpg");
+  min-height: 600px;
+  height: calc(100vh);
+  background-size: cover; }
+  #home .primary-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    #home .primary-overlay .highlight {
+      color: #E31B6D; }
+    #home .primary-overlay a {
+      border-width: medium; }
+    #home .primary-overlay .cover-head {
+      font-size: 39pt;
+      line-height: 45pt;
+      text-align: center; }
+
+.navbar {
+  opacity: 0.9;
+  background: #1B242F;
+  border-bottom: 3px solid #04C2C9; }
+  .navbar .nav-item {
+    font-size: 1.4rem;
+    padding-left: 0.8rem; }
+    .navbar .nav-item a {
+      color: #fff; }
+    .navbar .nav-item a:hover {
+      color: #E31B6D; }
+    .navbar .nav-item .nav-link.active {
+      color: #E31B6D; }
+
+#about {
+  color: #444649; }
+  #about .sub-text {
+    font-size: 1.33rem; }
+  #about .progress {
+    position: relative;
+    height: 28px;
+    max-width: 90%; }
+    #about .progress .progress-bar {
+      height: 100%;
+      background-color: #00A1A7; }
+    #about .progress .progress-type {
+      position: absolute;
+      width: 15%;
+      height: 100%;
+      left: 0px;
+      color: #fff;
+      background-color: #04C2C9;
+      padding-top: 6px;
+      font-weight: bold; }
+    #about .progress .progress-completed {
+      position: absolute;
+      padding-top: 6px;
+      right: 0px; }
+
+@media (max-width: 576px) {
+  nav .container {
+    width: 100%; }
+    nav .container .nav-item {
+      font-size: 0.9rem; }
+  #home .primary-overlay .cover-head {
+    font-size: 16pt;
+    line-height: 25pt; }
+  #about .progress {
+    height: 22px;
+    max-width: 100%; } }
+
+@media (max-width: 576px) {
+  .section-header .heading {
+    font-size: 25pt; }
+  #about img {
+    height: 220px;
+    width: 230px; }
+  .label-head {
+    font-size: 14pt; }
+  .label-sub {
+    font-size: 8pt; } }
