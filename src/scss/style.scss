@@ -14,12 +14,18 @@ body{
 }
 
 
-// HORIZONTAL line
+// SECTION
+
+section{
+    line-height: 18pt;
+    padding: 100px 0 130px 0;
+}
 
 // Section header
 .section-header{
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    font-size: 30pt;
+    // margin-top: 5rem;
+    // margin-bottom: 5rem;
     hr {
         border: none;
         height: 4px;
@@ -30,6 +36,73 @@ body{
     }
 }
 
+// LABEL HEADERS AND SUBS
+.label-head{
+    font-size: 18pt;
+}
+
+
+
+// HEXAGON
+#hex1 {
+  width: 100px;
+  height: 100px;
+}
+
+#color1 {
+  background-color: $blue-light;
+}
+
+
+.hexagon-wrapper {
+  text-align: center;
+  margin: 20 20 0 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.hexagon {
+  height: 100%;
+  width: calc(100% * 0.57735);
+  display: inline-block;
+  i{
+        position: absolute;
+        top: 27px;
+        font-size: 34pt;
+        color: #fff;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        z-index: 1;
+  }
+}
+
+.hexagon:before {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(60deg);
+}
+
+.hexagon:after {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(-60deg);
+}
+
+
+
+
+// HOME
 #home{
     position:relative;
     background-image: url('../img/mountains.jpg');
@@ -60,13 +133,14 @@ body{
 // NAV
 .navbar{
     // box-shadow: 2px 2px 5px $primary;
-    opacity: 0.9;
+    // opacity: 0.9;
     background: $black;
-    border-bottom: 3px solid #04C2C9;
+    border-bottom: 3.7px solid #04C2C9;
+    // height: 50px;
     .nav-item{
-        font-size: 1.4rem;
+        font-size: initial;
         // padding: 0 2rem;
-        padding-left: 0.8rem;
+        // padding-left: 0.8rem;
         a{
             color:#fff;
         }
@@ -81,7 +155,6 @@ body{
 }
 
 // ABOUT
-
 #about{
         // margin-top: 75px;
     color: $black2;
@@ -92,25 +165,27 @@ body{
     .progress{
         position: relative;
         height: 28px;
-        max-width: 90%;
+        max-width: 100%;
+        font-size: 11pt;
         .progress-bar{
             height: 100%;
             background-color: $blue-dark;
+            transition: width 2s;
+            transition-timing-function: linear;
         }
         .progress-type{
             position: absolute;
-            width: 15%;
+            width: 110px;
             height: 100%;
         	left: 0px;
             color: #fff;
         	background-color: $blue-light;
-            padding-top: 6px;
-            font-weight: bold;
+            justify-content: center;
         }
         .progress-completed{
             position: absolute;
             padding-top: 6px;
-        	right: 0px;
+        	right: 4px;
         }
     }
 
@@ -126,6 +201,22 @@ body{
         }
     }
 
+    #hex1 {
+      width: 80px;
+      height: 80px;
+    }
+
+    .hexagon{
+        i{
+            top: 17px;
+        }
+    }
+
+    section{
+        line-height: 11pt;
+        padding: 70px 0 70px 0;
+    }
+
     #home .primary-overlay .cover-head{
         font-size: 16pt;
         line-height: 25pt;
@@ -134,7 +225,15 @@ body{
     #about{
         .progress{
             height: 22px;
-            max-width: 100%;
+            font-size: 7pt;
+            max-width: calc(100% - 15px);
+            margin: 50px auto 0 auto;
+            .progress-type{
+                width: 70px;
+            }
+            .progress-completed{
+                display: none;
+            }
         }
 
     }

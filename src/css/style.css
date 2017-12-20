@@ -1,9 +1,12 @@
 body {
   font-family: 'Raleway'; }
 
+section {
+  line-height: 18pt;
+  padding: 100px 0 130px 0; }
+
 .section-header {
-  margin-top: 5rem;
-  margin-bottom: 5rem; }
+  font-size: 30pt; }
   .section-header hr {
     border: none;
     height: 4px;
@@ -13,6 +16,56 @@ body {
     background-color: #444649;
     /* Modern Browsers */
     width: 4rem; }
+
+.label-head {
+  font-size: 18pt; }
+
+#hex1 {
+  width: 100px;
+  height: 100px; }
+
+#color1 {
+  background-color: #04C2C9; }
+
+.hexagon-wrapper {
+  text-align: center;
+  margin: 20 20 0 20px;
+  position: relative;
+  display: inline-block; }
+
+.hexagon {
+  height: 100%;
+  width: calc(100% * 0.57735);
+  display: inline-block; }
+  .hexagon i {
+    position: absolute;
+    top: 27px;
+    font-size: 34pt;
+    color: #fff;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    z-index: 1; }
+
+.hexagon:before {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(60deg); }
+
+.hexagon:after {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(-60deg); }
 
 #home {
   position: relative;
@@ -37,12 +90,10 @@ body {
       text-align: center; }
 
 .navbar {
-  opacity: 0.9;
   background: #1B242F;
-  border-bottom: 3px solid #04C2C9; }
+  border-bottom: 3.7px solid #04C2C9; }
   .navbar .nav-item {
-    font-size: 1.4rem;
-    padding-left: 0.8rem; }
+    font-size: initial; }
     .navbar .nav-item a {
       color: #fff; }
     .navbar .nav-item a:hover {
@@ -57,35 +108,51 @@ body {
   #about .progress {
     position: relative;
     height: 28px;
-    max-width: 90%; }
+    max-width: 100%;
+    font-size: 11pt; }
     #about .progress .progress-bar {
       height: 100%;
-      background-color: #00A1A7; }
+      background-color: #00A1A7;
+      transition: width 2s;
+      transition-timing-function: linear; }
     #about .progress .progress-type {
       position: absolute;
-      width: 15%;
+      width: 110px;
       height: 100%;
       left: 0px;
       color: #fff;
       background-color: #04C2C9;
-      padding-top: 6px;
-      font-weight: bold; }
+      justify-content: center; }
     #about .progress .progress-completed {
       position: absolute;
       padding-top: 6px;
-      right: 0px; }
+      right: 4px; }
 
 @media (max-width: 576px) {
   nav .container {
     width: 100%; }
     nav .container .nav-item {
       font-size: 0.9rem; }
+  #hex1 {
+    width: 80px;
+    height: 80px; }
+  .hexagon i {
+    top: 17px; }
+  section {
+    line-height: 11pt;
+    padding: 70px 0 70px 0; }
   #home .primary-overlay .cover-head {
     font-size: 16pt;
     line-height: 25pt; }
   #about .progress {
     height: 22px;
-    max-width: 100%; } }
+    font-size: 7pt;
+    max-width: calc(100% - 15px);
+    margin: 50px auto 0 auto; }
+    #about .progress .progress-type {
+      width: 70px; }
+    #about .progress .progress-completed {
+      display: none; } }
 
 @media (max-width: 576px) {
   .section-header .heading {
