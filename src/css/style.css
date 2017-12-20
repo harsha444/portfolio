@@ -7,6 +7,9 @@ section {
 
 .section-header {
   font-size: 30pt; }
+  .section-header .heading {
+    font-family: 'raleway';
+    font-weight: bold; }
   .section-header hr {
     border: none;
     height: 4px;
@@ -19,6 +22,10 @@ section {
 
 .label-head {
   font-size: 18pt; }
+
+.btn:hover {
+  background-color: #04C2C9;
+  border-color: #04C2C9; }
 
 #hex1 {
   width: 100px;

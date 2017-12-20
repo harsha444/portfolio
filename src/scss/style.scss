@@ -26,6 +26,10 @@ section{
     font-size: 30pt;
     // margin-top: 5rem;
     // margin-bottom: 5rem;
+    .heading{
+        font-family: 'raleway';
+        font-weight: bold;
+    }
     hr {
         border: none;
         height: 4px;
@@ -41,7 +45,11 @@ section{
     font-size: 18pt;
 }
 
-
+// Buttons
+.btn:hover{
+    background-color: $blue-light;
+    border-color: $blue-light;
+}
 
 // HEXAGON
 #hex1 {
