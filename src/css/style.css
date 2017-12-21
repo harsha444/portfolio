@@ -138,14 +138,22 @@ section {
 
 #projects {
   background-color: #f5f5f5; }
+  #projects .header-list {
+    color: #616161; }
+    #projects .header-list .filter text {
+      cursor: pointer; }
+    #projects .header-list .active {
+      color: white;
+      background-color: #E31B6D;
+      transition: background-color 0.8s;
+      cursor: pointer; }
   #projects .gallery {
-    margin-left: 15rem;
-    margin-right: 15rem; }
+    margin-left: 20rem;
+    margin-right: 20rem; }
     #projects .gallery .cap1 {
       position: absolute;
       width: 100%;
-      height: 70%;
-      background: rgba(255, 255, 255, 0.5);
+      height: 50%;
       top: 0;
       left: -100%;
       padding: 50px;
@@ -153,17 +161,28 @@ section {
     #projects .gallery .cap2 {
       position: absolute;
       width: 100%;
-      height: 30%;
-      background: rgba(0, 178, 255, 0.5);
+      height: 50%;
       bottom: 0;
       left: 100%;
       padding: 20px;
-      transition: all 0.5s ease-in-out; }
+      transition: all 0.5s; }
+      #projects .gallery .cap2 .button {
+        cursor: pointer; }
+        #projects .gallery .cap2 .button:hover {
+          color: #fff;
+          background-color: #E31B6D;
+          transition: background-color 0.5s; }
     #projects .gallery img {
-      transition: opacity 0.5s; }
+      transition: opacity 0.5s;
+      cursor: pointer; }
     #projects .gallery .each-item {
       position: relative;
       overflow: hidden; }
+      #projects .gallery .each-item .button {
+        border: 2px solid #E31B6D;
+        width: 170px;
+        font-size: 13pt;
+        margin: 0 auto; }
     #projects .gallery .each-item:hover .image {
       opacity: 0; }
     #projects .gallery .each-item:hover .cap1 {
@@ -195,7 +214,12 @@ section {
     #about .progress .progress-type {
       width: 70px; }
     #about .progress .progress-completed {
-      display: none; } }
+      display: none; }
+  #projects {
+    line-height: 18pt; }
+    #projects .header-list .filter text {
+      font-size: 7pt;
+      overflow: hidden; } }
 
 @media (max-width: 576px) {
   .section-header .heading {

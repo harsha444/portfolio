@@ -1,6 +1,13 @@
+// Code for data-filter-tab
+
+
+// Code for data-filter effect
 $(document).ready(function(){
     // clicking button with class "filter"
     $(".filter").click(function(){
+        $(".filter").removeClass("active");
+        $(this).addClass("active");
+
         // get the data-filter value of the button
         var filterValue = $(this).attr('data-filter');
 

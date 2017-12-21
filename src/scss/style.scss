@@ -3,6 +3,7 @@ $primary-overlay: rgba(0, 0, 0, 0.8);
 $font: Raleway;
 $black: #1B242F;
 $black2: #444649;
+$black3: #616161;
 $blue-light: #04C2C9;
 $blue-dark: #00A1A7;
 $cement: #f5f5f5; // body{
@@ -200,15 +201,32 @@ section {
 #projects {
     background-color: $cement;
 
+    .header-list{
+        color: $black3;
+        .filter{
+            text{
+                cursor: pointer;
+            }
+        }
+
+        .active{
+            color: white;
+            background-color: $primary;
+            transition: background-color 0.8s;
+            cursor: pointer;
+        }
+    }
+
+
     .gallery {
-        margin-left: 15rem;
-        margin-right: 15rem;
+        margin-left: 20rem;
+        margin-right: 20rem;
 
         .cap1 {
             position: absolute;
             width: 100%;
-            height: 70%;
-            background: rgba(255, 255, 255, 0.5);
+            height: 50%;
+            // background: rgba(255, 255, 255, 0.5);
             top: 0;
             left:-100%;
             // top: -100%;
@@ -219,22 +237,38 @@ section {
         .cap2 {
             position: absolute;
             width: 100%;
-            height: 30%;
-            background: rgba(0, 178, 255, 0.5);
+            height: 50%;
+            // background: rgba(0, 178, 255, 0.5);
             bottom: 0;
             left:100%;
             // top: 100%;
             padding: 20px;
-            transition: all 0.5s ease-in-out;
+            transition: all 0.5s;
+            .button{
+                cursor: pointer;
+                &:hover{
+                    color: #fff;
+                    background-color: $primary;
+                    transition: background-color 0.5s;
+                }
+            }
         }
+
 
         img {
             transition: opacity 0.5s;
+            cursor: pointer;
         }
 
         .each-item{
             position:relative;
             overflow:hidden;
+            .button{
+                border: 2px solid $primary;
+                width: 170px;
+                font-size: 13pt;
+                margin: 0 auto;
+            }
         }
 
 
@@ -309,6 +343,19 @@ section {
             }
         }
     }
+
+    #projects{
+            line-height: 18pt;
+            .header-list{
+                .filter{
+                    text{
+                        font-size: 7pt;
+                        overflow: hidden;
+                    }
+                }
+            }
+    }
+
 }
 @media(max-width:576px) {
     .section-header {
@@ -337,11 +384,6 @@ section {
         .gallery {
             margin-left: 0;
             margin-right: 0;
-        }
-
-        img {
-            // height: 300px;
-            // width: 390px;
         }
     }
 }
