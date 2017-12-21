@@ -18,7 +18,8 @@ sr.reveal('.heading-left', {
   delay: 0,
   rotate: {x:0, y:0,  z:0},
   scale: 0,
-  distance: '15rem'
+  distance: '15rem',
+  mobile: false
 }, 0);
 
 sr.reveal('.heading-right', {
@@ -27,7 +28,8 @@ sr.reveal('.heading-right', {
   delay: 0,
   rotate: {x:0, y:0,  z:0},
   scale: 0,
-  distance: '15rem'
+  distance: '15rem',
+  mobile: false
 }, 0);
 
 
@@ -38,6 +40,7 @@ sr.reveal('.deco-line-left', {
   delay: 1000,
   rotate: {x:0, y:0,  z:0},
   scale: 0,
+  mobile: false,
   distance: '15rem'
 }, 0);
 
@@ -47,6 +50,7 @@ sr.reveal('.deco-line-right', {
   delay: 1000,
   rotate: {x:0, y:0,  z:0},
   scale: 0,
+  mobile: false,
   distance: '15rem'
 }, 0);
 
@@ -57,6 +61,7 @@ sr.reveal('.hexagon-wrapper', {
     delay: 0, //how much time before animation starts
     rotate: {x:0, y:180,  z:0},
     scale: 0.9,
+    mobile: false,
     distance: '0px'
 }, 200); //if more classes, time b/w each animation
 
@@ -68,6 +73,7 @@ sr.reveal('.hexagon-wrapper', {
     delay: 0,
     rotate: {x:0, y:0,  z:0},
     scale: 0,
+    mobile: false,
     distance: '15rem'
 }, 0);
 
@@ -89,6 +95,7 @@ sr.reveal('.progress', {
   delay: 0,
   rotate: {x:0, y:0,  z:0},
   scale: 0,
+  mobile: false,
   distance: '15rem'
 }, 0);
 
@@ -100,6 +107,7 @@ sr.reveal('.each-item', {
   delay: 80,
   rotate: {x:0, y:0,  z:0},
   scale: 0,
+  mobile: false,
   distance: '10rem'
 },100);
 
@@ -128,4 +136,11 @@ $(document).ready(function(){
         }
     });
 
+});
+
+// Code for Nav-Bar problem
+$(document).ready(function () {
+  $(".navbar-nav li a").click(function(event) {
+    $(".navbar-collapse").collapse('hide');
+  });
 });
