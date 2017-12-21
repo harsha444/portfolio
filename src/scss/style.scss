@@ -1,81 +1,79 @@
 $primary: #E31B6D;
-$primary-overlay:rgba(0, 0, 0, 0.8);
+$primary-overlay: rgba(0, 0, 0, 0.8);
 $font: Raleway;
 $black: #1B242F;
 $black2: #444649;
-$blue-light:#04C2C9;
-$blue-dark:#00A1A7;
-$cement: #f5f5f5;
-// body{
+$blue-light: #04C2C9;
+$blue-dark: #00A1A7;
+$cement: #f5f5f5; // body{
 //     margin-top: 105px;
 // }
 
-body{
+body {
     font-family: 'Raleway';
 }
 
-
-// SECTION
-
-section{
-    line-height: 18pt;
-    padding: 100px 0 130px 0;
+.highlight {
+    color: $primary;
 }
-
+// SECTION
+section {
+    line-height: 18pt;
+    padding: 100px 0 130px;
+}
 // Section header
-.section-header{
+.section-header {
     font-size: 30pt;
     // margin-top: 5rem;
     // margin-bottom: 5rem;
-    .heading{
+    .heading {
         font-family: 'raleway';
         font-weight: bold;
     }
+
     hr {
         border: none;
         height: 4px;
         /* Set the hr color */
-        color: $black2; /* old IE */
-        background-color: $black2; /* Modern Browsers */
+        color: $black2;
+        /* old IE */
+        background-color: $black2;
+        /* Modern Browsers */
         width: 4rem;
-        
     }
 }
-
 // LABEL HEADERS AND SUBS
-.label-head{
+.label-head {
     font-size: 18pt;
 }
-
 // Buttons
-.btn:hover{
+.btn:hover {
     background-color: $blue-light;
     border-color: $blue-light;
 }
-
 // HEXAGON
 #hex1 {
-  width: 100px;
-  height: 100px;
+    width: 100px;
+    height: 100px;
 }
 
 #color1 {
-  background-color: $blue-light;
+    background-color: $blue-light;
 }
 
-
 .hexagon-wrapper {
-  text-align: center;
-  margin: 20 20 0 20px;
-  position: relative;
-  display: inline-block;
+    text-align: center;
+    margin: 20 20 0 20px;
+    position: relative;
+    display: inline-block;
 }
 
 .hexagon {
-  height: 100%;
-  width: calc(100% * 0.57735);
-  display: inline-block;
-  i{
+    height: 100%;
+    width: calc(100% * 0.57735);
+    display: inline-block;
+
+    i {
         position: absolute;
         top: 27px;
         font-size: 34pt;
@@ -84,193 +82,266 @@ section{
         right: 0;
         justify-content: center;
         z-index: 1;
-  }
+    }
 }
 
 .hexagon:before {
-  position: absolute;
-  top: 0;
-  right: calc((100% / 2) - ((100% * 0.57735) / 2));
-  background-color: inherit;
-  height: inherit;
-  width: inherit;
-  content: '';
-  transform: rotateZ(60deg);
+    position: absolute;
+    top: 0;
+    right: calc((100% / 2) - ((100% * 0.57735) / 2));
+    background-color: inherit;
+    height: inherit;
+    width: inherit;
+    content: '';
+    transform: rotateZ(60deg);
 }
 
 .hexagon:after {
-  position: absolute;
-  top: 0;
-  right: calc((100% / 2) - ((100% * 0.57735) / 2));
-  background-color: inherit;
-  height: inherit;
-  width: inherit;
-  content: '';
-  transform: rotateZ(-60deg);
+    position: absolute;
+    top: 0;
+    right: calc((100% / 2) - ((100% * 0.57735) / 2));
+    background-color: inherit;
+    height: inherit;
+    width: inherit;
+    content: '';
+    transform: rotateZ(-60deg);
 }
-
-
-
-
 // HOME
-#home{
-    position:relative;
-    background-image: url('../img/mountains.jpg');
-    min-height:600px;
+#home {
+    position: relative;
+    background-image: url("../img/mountains.jpg");
+    min-height: 600px;
     height: calc(100vh);
     background-size: cover;
-    .primary-overlay{
+
+    .primary-overlay {
         background-color: $primary-overlay;
         position: absolute;
-        top:0;
-        left:0;
-        width:100%;
+        top: 0;
+        left: 0;
+        width: 100%;
         height: 100%;
-        .highlight{
-            color: $primary;
-        }
-        a{
+
+        a {
             border-width: medium;
         }
-        .cover-head{
+
+        .cover-head {
             font-size: 39pt;
             line-height: 45pt;
             text-align: center;
         }
     }
 }
-
 // NAV
-.navbar{
+.navbar {
     // box-shadow: 2px 2px 5px $primary;
     // opacity: 0.9;
     background: $black;
     border-bottom: 3.7px solid #04C2C9;
     // height: 50px;
-    .nav-item{
+    .nav-item {
         font-size: initial;
         // padding: 0 2rem;
         // padding-left: 0.8rem;
-        a{
-            color:#fff;
+        a {
+            color: #fff;
         }
-        a:hover{
+
+        a:hover {
             color: $primary;
         }
-        .nav-link.active{
+
+        .nav-link.active {
             color: $primary;
         }
     }
-
 }
-
 // ABOUT
-#about{
-        // margin-top: 75px;
+#about {
+    // margin-top: 75px;
     color: $black2;
-    .sub-text{
+
+    .sub-text {
         font-size: 1.33rem;
     }
 
-    .progress{
+    .progress {
         position: relative;
         height: 28px;
         max-width: 100%;
         font-size: 11pt;
-        .progress-bar{
+
+        .progress-bar {
             height: 100%;
             background-color: $blue-dark;
             transition: width 2s;
             transition-timing-function: linear;
         }
-        .progress-type{
+
+        .progress-type {
             position: absolute;
             width: 110px;
             height: 100%;
-        	left: 0px;
+            left: 0;
             color: #fff;
-        	background-color: $blue-light;
+            background-color: $blue-light;
             justify-content: center;
         }
-        .progress-completed{
+
+        .progress-completed {
             position: absolute;
             padding-top: 6px;
-        	right: 4px;
+            right: 4px;
         }
+    }
+}
+
+#projects {
+    background-color: $cement;
+
+    .gallery {
+        margin-left: 15rem;
+        margin-right: 15rem;
+
+        .cap1 {
+            position: absolute;
+            width: 100%;
+            height: 70%;
+            background: rgba(255, 255, 255, 0.5);
+            top: 0;
+            left:-100%;
+            // top: -100%;
+            padding: 50px;
+            transition: all 0.5s;
+        }
+
+        .cap2 {
+            position: absolute;
+            width: 100%;
+            height: 30%;
+            background: rgba(0, 178, 255, 0.5);
+            bottom: 0;
+            left:100%;
+            // top: 100%;
+            padding: 20px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        img {
+            transition: opacity 0.5s;
+        }
+
+        .each-item{
+            position:relative;
+            overflow:hidden;
+        }
+
+
+        .each-item:hover{
+            .image{
+                opacity: 0;
+            }
+            .cap1{
+                left: 0px;
+            }
+            .cap2{
+                left: 0px;
+            }
+        }
+
+        // img:hover ~ .cap1{
+        //     left: 0px;
+        // }
+        // img:hover ~ .cap2{
+        //     left: 0px;
+        // }
+        // img:hover{
+        //     opacity: 0;
+        // }
     }
 
 }
-
-
-#projects{
-    background-color: $cement;
-}
-
-
-
 // Media Queries
-
-@media(max-width:576px){
-    nav .container{
+@media(max-width:576px) {
+    nav .container {
         width: 100%;
-        .nav-item{
+
+        .nav-item {
             font-size: 0.9rem;
         }
     }
 
     #hex1 {
-      width: 80px;
-      height: 80px;
+        width: 80px;
+        height: 80px;
     }
 
-    .hexagon{
-        i{
+    .hexagon {
+        i {
             top: 17px;
         }
     }
 
-    section{
+    section {
         line-height: 11pt;
-        padding: 70px 0 70px 0;
+        padding: 70px 0;
     }
 
-    #home .primary-overlay .cover-head{
+    #home .primary-overlay .cover-head {
         font-size: 16pt;
         line-height: 25pt;
     }
 
-    #about{
-        .progress{
+    #about {
+        .progress {
             height: 22px;
             font-size: 7pt;
             max-width: calc(100% - 15px);
-            margin: 50px auto 0 auto;
-            .progress-type{
+            margin: 50px auto 0;
+
+            .progress-type {
                 width: 70px;
             }
-            .progress-completed{
+
+            .progress-completed {
                 display: none;
             }
         }
-
     }
 }
 @media(max-width:576px) {
-    .section-header{
-        .heading{
+    .section-header {
+        .heading {
             font-size: 25pt;
         }
     }
-    #about{
-        img{
+
+    #about {
+        img {
             height: 220px;
             width: 230px;
         }
     }
-    .label-head{
+
+    .label-head {
         font-size: 14pt;
     }
-    .label-sub{
+
+    .label-sub {
         font-size: 8pt;
+    }
+}
+@media(max-width:1556px) {
+    #projects {
+        .gallery {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        img {
+            // height: 300px;
+            // width: 390px;
+        }
     }
 }
