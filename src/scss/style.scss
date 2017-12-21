@@ -47,6 +47,7 @@ section {
 // LABEL HEADERS AND SUBS
 .label-head {
     font-size: 18pt;
+    color: $black3;
 }
 // Buttons
 .btn:hover {
@@ -387,4 +388,13 @@ section {
             margin-right: 0;
         }
     }
+}
+
+// Preloader
+.hameid-loader-overlay {
+    width: 100%;
+    height: 100%;
+    background: url('../img/preloader3.gif') center no-repeat #FFF;
+    z-index: 99999;
+    position: fixed;
 }

@@ -144,3 +144,9 @@ $(document).ready(function () {
     $(".navbar-collapse").collapse('hide');
   });
 });
+
+// Code for pre loader
+
+jQuery(window).on("load",function(){
+        jQuery(".hameid-loader-overlay").fadeOut(500);
+    });
