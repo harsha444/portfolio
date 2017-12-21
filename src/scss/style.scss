@@ -28,15 +28,16 @@ section {
     // margin-top: 5rem;
     // margin-bottom: 5rem;
     .heading {
+        color: $black2;
         font-family: 'raleway';
         font-weight: bold;
     }
 
     hr {
+        color: $black2;
         border: none;
         height: 4px;
         /* Set the hr color */
-        color: $black2;
         /* old IE */
         background-color: $black2;
         /* Modern Browsers */
@@ -53,7 +54,7 @@ section {
     border-color: $blue-light;
 }
 // HEXAGON
-#hex1 {
+.hex1 {
     width: 100px;
     height: 100px;
 }
@@ -67,6 +68,7 @@ section {
     margin: 20 20 0 20px;
     position: relative;
     display: inline-block;
+    // animation: flipInX .75s ease both
 }
 
 .hexagon {
@@ -161,7 +163,6 @@ section {
 // ABOUT
 #about {
     // margin-top: 75px;
-    color: $black2;
 
     .sub-text {
         font-size: 1.33rem;
@@ -176,8 +177,8 @@ section {
         .progress-bar {
             height: 100%;
             background-color: $blue-dark;
-            transition: width 2s;
             transition-timing-function: linear;
+
         }
 
         .progress-type {
@@ -306,7 +307,7 @@ section {
         }
     }
 
-    #hex1 {
+    .hex1 {
         width: 80px;
         height: 80px;
     }
