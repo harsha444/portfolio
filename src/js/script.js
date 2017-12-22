@@ -18,7 +18,7 @@ sr.reveal('.heading-left', {
   delay: 0,
   rotate: {x:0, y:0,  z:0},
   scale: 0,
-  distance: '15rem',
+  distance: '10vw',
   mobile: false
 }, 0);
 
@@ -28,7 +28,7 @@ sr.reveal('.heading-right', {
   delay: 0,
   rotate: {x:0, y:0,  z:0},
   scale: 0,
-  distance: '15rem',
+  distance: '10vw',
   mobile: false
 }, 0);
 
@@ -41,7 +41,7 @@ sr.reveal('.deco-line-left', {
   rotate: {x:0, y:0,  z:0},
   scale: 0,
   mobile: false,
-  distance: '15rem'
+  distance: '10vw'
 }, 0);
 
 sr.reveal('.deco-line-right', {
@@ -49,9 +49,9 @@ sr.reveal('.deco-line-right', {
   duration: 1000,
   delay: 1000,
   rotate: {x:0, y:0,  z:0},
-  scale: 0,
+  scale: 1,
   mobile: false,
-  distance: '15rem'
+  distance: '10vw'
 }, 0);
 
 
@@ -74,7 +74,7 @@ sr.reveal('.hexagon-wrapper', {
     rotate: {x:0, y:0,  z:0},
     scale: 0,
     mobile: false,
-    distance: '15rem'
+    distance: '45%'
 }, 0);
 
 
@@ -96,7 +96,7 @@ sr.reveal('.progress', {
   rotate: {x:0, y:0,  z:0},
   scale: 0,
   mobile: false,
-  distance: '15rem'
+  distance: '10vw'
 }, 0);
 
 // Image Section in Projects
