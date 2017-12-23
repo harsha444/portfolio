@@ -467,8 +467,15 @@ section {
 
 // Contact
 #contact{
-    // background-color: $violet-light;
-    // padding-top: 0;
+    background-color: $violet-light;
+    padding-top: 0;
+    .section-header{
+        text-color: white;
+    }
+    .short_msg{
+        font-weight: 600;
+        color: $blue-light;
+    }
 }
 
 // Media Queries

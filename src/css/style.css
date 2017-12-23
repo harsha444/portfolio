@@ -311,6 +311,15 @@ section {
     margin-left: -3px;
     z-index: 0; }
 
+#contact {
+  background-color: #252934;
+  padding-top: 0; }
+  #contact .section-header {
+    text-color: white; }
+  #contact .short_msg {
+    font-weight: 600;
+    color: #04C2C9; }
+
 @media (max-width: 576px) {
   nav .container {
     width: 100%; }
