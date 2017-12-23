@@ -151,6 +151,33 @@ $(document).ready(function(){
 
 });
 
+
+// Code for mail ajax
+var message = "";
+
+$("#form-submit").on("click", function() {
+    // message = $("#contactform").serialize();
+    var data={
+         userName: $('#sender_name').val(),
+         email: $('#sender_email').val(),
+         msg:$('#sender_message').val()
+        }
+    $.ajax({
+        url: "//formspree.io/sriharshashm@gmail.com",
+        method: "POST",
+        data: {data},
+        dataType: "json"
+    });
+    $('#success').css("height","36px");
+    return false;
+});
+
+// Code for closing banner
+$("#close").on("click", function(){
+    $('#success').css("height","0px");
+})
+
+
 // Code for Nav-Bar problem
 $(document).ready(function () {
   $(".navbar-nav li a").click(function(event) {
@@ -159,7 +186,6 @@ $(document).ready(function () {
 });
 
 // Code for pre loader
-
 jQuery(window).on("load",function(){
         jQuery(".hameid-loader-overlay").fadeOut(500);
     });

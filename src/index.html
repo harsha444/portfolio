@@ -453,8 +453,30 @@
                   <text class="short_msg">Have a question or want to work together?</text>
               </div>
             </div>
-            <!-- Form Section -->
-            
+            <!-- Form + Map Section -->
+            <div class="container form-map">
+                <div class="row mt-5">
+                    <!-- Form -->
+                    <div class="col-sm-6 offset-3">
+                        <form method="POST" id="contactform" action="js/script.js">
+                            <input type="text" class="form-control" id="sender_name" name="name" placeholder="Name" required=required>
+                            <input type="email" class="form-control" id="sender_email" name="email" placeholder="E-mail" required=required>
+                            <textarea name="message" id="sender_message" rows="8" style="width:100%" placeholder=" Your Message"></textarea>
+                            <div id="success" class="expand">
+                              <div>Your message was sent successfully. Thanks!
+                                  <span id="close" class="fa fa-close"></span>
+                              </div>
+                            </div>
+                             <input type="text" name="_gotcha" style="display:none" />
+                            <button type="submit" id="form-submit" class="px-4 py-2 btn btn-outline-secondary btn-lg text-white text-uppercase">Submit</button>
+                        </form>
+                    </div>
+                    <!-- Map -->
+                    <!-- <div class="col-sm-6">
+
+                    </div> -->
+                </div>
+            </div>
         </div>
     </section>
 
