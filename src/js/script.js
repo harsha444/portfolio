@@ -111,6 +111,19 @@ sr.reveal('.each-item', {
   distance: '10rem'
 },100);
 
+// Timeline Section
+sr.reveal('.container-timeline', {
+  origin: 'bottom',
+  duration: 1000,
+  delay: 400,
+  rotate: {x:0, y:180,  z:0},
+  scale: 0,
+  mobile: false,
+  distance: '3vw'
+}, 200);
+
+
+
 
 // Code for data-filter tab and data-filter effect
 $(document).ready(function(){

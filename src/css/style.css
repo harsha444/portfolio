@@ -193,6 +193,124 @@ section {
 * {
   box-sizing: border-box; }
 
+#education {
+  background-color: #f5f5f5;
+  /* The actual timeline (the vertical ruler) */ }
+  #education .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* The circles on the timeline */
+    /* Place the container-timeline to the left */
+    /* Place the container-timeline to the right */
+    /* Add arrows to the left container-timeline (pointing right) */
+    /* Add arrows to the right container-timeline (pointing left) */
+    /* Fix the circle for container-timelines on the right side */ }
+    #education .timeline .container-timeline {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%; }
+      #education .timeline .container-timeline .content {
+        border-color: #00A1A7;
+        border-style: solid;
+        border-width: 5px 0 0 0;
+        padding: 20px 30px;
+        background-color: white;
+        position: relative;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
+        #education .timeline .container-timeline .content h3 {
+          color: #444649;
+          font-size: 18pt;
+          font-weight: 300; }
+        #education .timeline .container-timeline .content p {
+          font-size: 10pt;
+          letter-spacing: 1.5px; }
+        #education .timeline .container-timeline .content .date {
+          color: #04C2C9;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 1;
+          text-align: left;
+          margin-bottom: 15px; }
+          #education .timeline .container-timeline .content .date span {
+            background-color: #00A1A7;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1;
+            display: inline-block;
+            position: relative;
+            padding: 5px 8px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px; }
+          #education .timeline .container-timeline .content .date span::before {
+            content: '';
+            width: 0;
+            height: 0;
+            top: 100%;
+            left: 5px;
+            display: block;
+            position: absolute;
+            border-style: solid;
+            border-width: 0 0 8px 8px;
+            border-color: transparent;
+            border-left-color: #00A1A7; }
+          #education .timeline .container-timeline .content .date text {
+            position: absolute;
+            right: 2rem; }
+    #education .timeline .container-timeline::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      right: -1.5px;
+      background-color: #00A1A7;
+      top: 27px;
+      border-radius: 50%;
+      z-index: 1; }
+    #education .timeline .left {
+      left: 0; }
+    #education .timeline .right {
+      left: 50%; }
+    #education .timeline .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid white;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent #04C2C9;
+      opacity: 0.5; }
+    #education .timeline .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #04C2C9 transparent transparent;
+      opacity: 0.5; }
+    #education .timeline .right::after {
+      left: -6px; }
+  #education .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #04C2C9;
+    top: 3rem;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 0; }
+
 @media (max-width: 576px) {
   nav .container {
     width: 100%; }
@@ -234,6 +352,32 @@ section {
     font-size: 14pt; }
   .label-sub {
     font-size: 8pt; } }
+
+@media (max-width: 760px) {
+  #education .timeline .container-timeline {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px; }
+    #education .timeline .container-timeline .content h3 {
+      color: #444649;
+      font-size: 15pt;
+      font-weight: 300; }
+    #education .timeline .container-timeline .content p {
+      font-size: 8pt;
+      letter-spacing: 1.5px; }
+  #education .timeline .container-timeline::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #04C2C9 transparent transparent; }
+  #education .timeline .right {
+    left: 0%; }
+  #education .timeline .left::after {
+    left: 25px; }
+  #education .timeline .right::after {
+    left: 25px; }
+  #education .timeline:after {
+    left: 31px; } }
 
 @media (max-width: 1556px) {
   #projects .gallery {
