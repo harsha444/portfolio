@@ -51,7 +51,7 @@ section {
   display: inline-block; }
   .hexagon i {
     position: absolute;
-    top: 27px;
+    top: 28px;
     font-size: 34pt;
     color: #fff;
     left: 0;
@@ -354,7 +354,53 @@ section {
     float: right;
     border-width: medium;
     font-size: 12pt;
-    margin: 5px 0 0 0; }
+    margin: 5px 0 0 0;
+    cursor: pointer; }
+
+footer {
+  background-color: #1E242C;
+  padding: 70px 0 50px 0;
+  position: relative; }
+  footer .page-link {
+    position: absolute;
+    top: -25px;
+    background: #E31B6D;
+    font-size: 30pt;
+    width: 47px;
+    height: 50px;
+    line-height: 40pt;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background .5s;
+    color: #fff;
+    border: none;
+    padding-top: 0px; }
+    footer .page-link:hover {
+      color: white;
+      background-color: #E31B6D; }
+  footer .m-icon {
+    color: #fff;
+    overflow: hidden;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    text-align: center;
+    margin: 0 15px;
+    background: #262F38;
+    font-size: 18pt; }
+    footer .m-icon:hover {
+      background-color: #04C2C9; }
+  footer a:hover {
+    text-decoration: none; }
+  footer .footnote {
+    font-size: 10pt;
+    color: #8F9AA7;
+    margin-top: 35px;
+    opacity: 0.6; }
 
 @media (max-width: 576px) {
   nav .container {
@@ -385,7 +431,9 @@ section {
     line-height: 18pt; }
     #projects .header-list .filter text {
       font-size: 7pt;
-      overflow: hidden; } }
+      overflow: hidden; }
+  #contact .short_msg {
+    font-size: 9pt; } }
 
 @media (max-width: 576px) {
   .section-header .heading {

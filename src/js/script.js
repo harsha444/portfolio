@@ -122,7 +122,22 @@ sr.reveal('.container-timeline', {
   distance: '3vw'
 }, 200);
 
+// Short Message section
+sr.reveal('.msg_section', {
+  origin: 'left',
+  duration: 1000,
+  delay: 1600,
+  rotate: {x:0, y:0,  z:0},
+  scale: 0,
+  mobile: false,
+  distance: '10vw'
+}, 0);
 
+// Contact Form
+sr.reveal('#contactform', {
+    duration: 1500,
+    delay: 800
+  });
 
 
 // Code for data-filter tab and data-filter effect
@@ -153,10 +168,13 @@ $(document).ready(function(){
 
 
 // Code for mail ajax
-var message = "";
-
-$("#form-submit").on("click", function() {
+$("#form-submit").on("click", function(){
     // message = $("#contactform").serialize();
+    // event.preventDefault();
+    if($(this).hasClass('disabled')){
+        alert('You have sent a msg just now! Please refresh the page if you want to send another');
+        return false;
+    }
     var data={
          userName: $('#sender_name').val(),
          email: $('#sender_email').val(),
@@ -169,6 +187,10 @@ $("#form-submit").on("click", function() {
         dataType: "json"
     });
     $('#success').css("height","36px");
+    $( '#contactform' ).each(function(){
+        this.reset();
+    });
+    $('#form-submit').addClass("disabled");
     return false;
 });
 
