@@ -112,7 +112,20 @@ sr.reveal('.each-item', {
 },100);
 
 // Timeline Section
-sr.reveal('.container-timeline', {
+
+// For work Cards
+sr.reveal('.work-container-effect', {
+    origin: 'bottom',
+    duration: 1000,
+    delay: 500,
+    rotate: {x:180, y:0,  z:0},
+    scale: 0,
+    mobile: false,
+    distance: '3vw'
+}, 200);
+
+// for education cards
+sr.reveal('.edu-container-effect', {
   origin: 'bottom',
   duration: 1000,
   delay: 400,
@@ -121,6 +134,7 @@ sr.reveal('.container-timeline', {
   mobile: false,
   distance: '3vw'
 }, 200);
+
 
 // Short Message section
 sr.reveal('.msg_section', {

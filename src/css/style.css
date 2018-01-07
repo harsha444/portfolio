@@ -193,10 +193,104 @@ section {
 * {
   box-sizing: border-box; }
 
+#work {
+  /* The actual timeline (the vertical ruler) */ }
+  #work .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Open sans';
+    /* The circles on the timeline */
+    /* Place the container-timeline to the left */
+    /* Place the container-timeline to the right */
+    /* Add arrows to the left container-timeline (pointing right) */
+    /* Add arrows to the right container-timeline (pointing left) */
+    /* Fix the circle for container-timelines on the right side */ }
+    #work .timeline .container-timeline {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%; }
+      #work .timeline .container-timeline .content {
+        border-color: #00A1A7;
+        border-style: solid;
+        border-width: 5px 0 0 0;
+        padding: 20px 30px;
+        background-color: white;
+        position: relative;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
+        #work .timeline .container-timeline .content h3 {
+          color: #444649;
+          font-size: 18pt;
+          font-weight: 300; }
+        #work .timeline .container-timeline .content p {
+          font-size: 10pt;
+          letter-spacing: 1.5px; }
+        #work .timeline .container-timeline .content .date {
+          color: #04C2C9;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 1;
+          margin-bottom: 15px; }
+          #work .timeline .container-timeline .content .date text {
+            position: absolute;
+            right: 2rem; }
+    #work .timeline .container-timeline::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      right: -1.5px;
+      background-color: #00A1A7;
+      top: 27px;
+      border-radius: 50%;
+      z-index: 1; }
+    #work .timeline .left {
+      left: 0; }
+    #work .timeline .right {
+      left: 50%; }
+    #work .timeline .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid white;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent #04C2C9;
+      opacity: 0.5; }
+    #work .timeline .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #04C2C9 transparent transparent;
+      opacity: 0.5; }
+    #work .timeline .right::after {
+      left: -6px; }
+  #work .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #04C2C9;
+    top: 3rem;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 0; }
+
 #education {
   background-color: #f5f5f5;
   /* The actual timeline (the vertical ruler) */ }
   #education .timeline {
+    font-family: 'Open Sans';
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
@@ -447,29 +541,29 @@ footer {
     font-size: 8pt; } }
 
 @media (max-width: 760px) {
-  #education .timeline .container-timeline {
+  #education .timeline .container-timeline, #work .timeline .container-timeline {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px; }
-    #education .timeline .container-timeline .content h3 {
+    #education .timeline .container-timeline .content h3, #work .timeline .container-timeline .content h3 {
       color: #444649;
       font-size: 15pt;
       font-weight: 300; }
-    #education .timeline .container-timeline .content p {
+    #education .timeline .container-timeline .content p, #work .timeline .container-timeline .content p {
       font-size: 8pt;
       letter-spacing: 1.5px; }
-  #education .timeline .container-timeline::before {
+  #education .timeline .container-timeline::before, #work .timeline .container-timeline::before {
     left: 60px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
     border-color: transparent #04C2C9 transparent transparent; }
-  #education .timeline .right {
+  #education .timeline .right, #work .timeline .right {
     left: 0%; }
-  #education .timeline .left::after {
+  #education .timeline .left::after, #work .timeline .left::after {
     left: 25px; }
-  #education .timeline .right::after {
+  #education .timeline .right::after, #work .timeline .right::after {
     left: 25px; }
-  #education .timeline:after {
+  #education .timeline:after, #work .timeline:after {
     left: 31px; } }
 
 @media (max-width: 1556px) {
@@ -480,6 +574,6 @@ footer {
 .hameid-loader-overlay {
   width: 100%;
   height: 100%;
-  background: url("../img/preloader3.gif") center no-repeat #FFF;
+  background: url("../img/preloader4.gif") center no-repeat #FFF;
   z-index: 99999;
   position: fixed; }

@@ -307,10 +307,140 @@ section {
     box-sizing: border-box;
 }
 
+
+#work{
+    .timeline{
+        // background-color: black;
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        font-family: 'Open sans';
+
+        .container-timeline {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+
+            .content{
+                border-color: $blue-dark;
+                border-style: solid;
+                border-width:5px 0 0 0;
+                padding: 20px 30px;
+                background-color: white;
+                position: relative;
+                // border-radius: 6px;
+                box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+
+                h3{
+                    color: $black2;
+                    font-size: 18pt;
+                    font-weight: 300;
+                }
+                p{
+                    font-size: 10pt;
+                    letter-spacing: 1.5px;
+                }
+
+                .date {
+                    color: $blue-light;
+                    font-size:16px;
+                    font-weight: 700;
+                    line-height: 1;
+                    margin-bottom: 15px;
+                    text{
+                        position: absolute;
+                        right: 2rem;
+                    }
+
+                }
+
+            }
+
+        }
+
+        /* The circles on the timeline */
+        .container-timeline::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            right: -1.5px;
+            background-color: $blue-dark;
+            // border: 4px solid #FF9F55;
+            top: 27px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Place the container-timeline to the left */
+        .left {
+            left: 0;
+        }
+
+        /* Place the container-timeline to the right */
+        .right {
+            left: 50%;
+        }
+
+        /* Add arrows to the left container-timeline (pointing right) */
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent $blue-light;
+            // box-shadow: 0 0 0 rgba(0, 0, 0, 0.12);
+            opacity: 0.5
+
+        }
+
+        /* Add arrows to the right container-timeline (pointing left) */
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent $blue-light transparent transparent;
+            opacity: 0.5;
+        }
+
+        /* Fix the circle for container-timelines on the right side */
+        .right::after {
+            left: -6px;
+        }
+
+    }
+
+    /* The actual timeline (the vertical ruler) */
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        background-color: $blue-light;
+        top: 3rem;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+        z-index: 0;
+    }
+}
+
 #education{
     background-color: $cement;
     .timeline{
         // background-color: black;
+        font-family: 'Open Sans';
         position: relative;
         max-width: 1200px;
         margin: 0 auto;
@@ -675,7 +805,7 @@ footer{
 }
 // Media Query for time line
 @media(max-width:760px){
-    #education{
+    #education,#work{
         .timeline{
             .container-timeline{
                 width: 100%;
@@ -732,7 +862,7 @@ footer{
 .hameid-loader-overlay {
     width: 100%;
     height: 100%;
-    background: url('../img/preloader3.gif') center no-repeat #FFF;
+    background: url('../img/preloader4.gif') center no-repeat #FFF;
     z-index: 99999;
     position: fixed;
 }
