@@ -49,7 +49,7 @@ sr.reveal('.deco-line-right', {
   duration: 1000,
   delay: 1000,
   rotate: {x:0, y:0,  z:0},
-  scale: 1,
+  scale: 0,
   mobile: false,
   distance: '10vw'
 }, 0);

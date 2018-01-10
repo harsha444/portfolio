@@ -15,6 +15,16 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="70">
+    <!-- Google analytics Section -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111673102-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111673102-1');
+    </script>
+
     <!-- Preloader Section -->
     <div class="hameid-loader-overlay">
         <noscript>
@@ -29,7 +39,7 @@
             <!-- <div class="row h-100 align-self-center"> -->
             <div class="p-4 align-self-center">
                 <h1 class="cover-head">
-                        Hello, I'm <a href="files/resume_min.pdf" target="_blank" class="resume"><span class="highlight">Sri Harsha</span>.</a>
+                        Hello, I'm <a href="files/resume_min.pdf" target="_blank" class="resume"><span class="highlight">&lt;/Sri Harsha&gt;</span>.</a>
                         <br> I'm a full-stack web developer.
                         <br>
                         <a href="#about" class="d-md-none py-2 px-3 mt-4 font-weight-bold btn btn-outline-secondary btn-sm text-white">
@@ -41,6 +51,12 @@
                                 <i class="pl-3 fa fa-arrow-right"></i>
                         </a>
                     </h1>
+                    <div class="resume_div d-flex flex-row justify-content-around mt-4">
+                        <a href="files/resume_min.pdf" target="_blank">
+                            &lt;/resume&gt;
+                            <i class="fa fa-download"></i>
+                        </a>
+                    </div>
             </div>
 
             <!-- </div> -->
@@ -438,8 +454,13 @@
         <div class="timeline pt-5">
           <div class="container-timeline edu-container-effect left">
             <div class="content">
-                <div class="date">
-                    <span>2014-2018</span>
+                <div class="details row">
+                    <div class="date col-9">
+                        <span>2014-2018</span>
+                    </div>
+                    <div class="marks col-3 font-italic text-center">
+                        <span>8.59</span>
+                    </div>
                 </div>
                 <h3>Bachelor's in IT</h3>
                 <p class="text-muted">NIT DURGAPUR</p>
@@ -447,9 +468,13 @@
             </div>
             <div class="container-timeline edu-container-effect right">
                 <div class="content">
-                    <div class="date">
-                        <span>2012-2014</span>
-                        <!-- <text>98.1%</text> -->
+                    <div class="details row">
+                        <div class="date col-9">
+                            <span>2012-2014</span>
+                        </div>
+                        <div class="marks col-3 font-italic text-center">
+                            <span>98.1%</span>
+                        </div>
                     </div>
                     <h3>Intermediate/ +2</h3>
                     <p class="text-muted">NARAYANA COLLEGE</p>
@@ -457,8 +482,13 @@
             </div>
             <div class="container-timeline edu-container-effect left">
                 <div class="content">
-                    <div class="date">
-                        <span>2011-2012</span>
+                    <div class="details row">
+                        <div class="date col-9">
+                            <span>2011-2012</span>
+                        </div>
+                        <div class="marks col-3 font-italic text-center">
+                            <span>9.3</span>
+                        </div>
                     </div>
                     <h3>10th class</h3>
                     <p class="text-muted">SPR SCHOOL</p>
@@ -478,10 +508,10 @@
         <div class="container">
             <!-- Section header -->
             <div class="section-header" style="margin-top:6rem">
-                <div class="heading heading-right text-center animated slideInLeft text-white">
+                <div class="heading heading-left text-center animated slideInLeft text-white">
                     CONTACT
                 </div>
-                <div class="deco-line deco-line-left mb-4 mt-4">
+                <div class="deco-line deco-line-right mb-4 mt-4">
                     <hr style="width: 7rem; background-color: white">
                 </div>
             </div>
@@ -552,7 +582,7 @@
             <!-- Copyright Section -->
             <div class="row text-center footnote">
                 <div class="col-12">
-                    <text>SRI HARSHA <span class="highlight">©2017</span></text>
+                    <text>SRI HARSHA <span class="highlight">©2018</span></text>
                 </div>
             </div>
         </div>
@@ -566,6 +596,9 @@
     <script src="js/navbar-fixed.js"></script>
     <script src="js/script.js"></script>
 </body>
-
+    <!-- For avoiding OOOtag -->
+    <script>
+        document.querySelector('[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."]').style.display = "none";
+    </script>
 
 </html>
