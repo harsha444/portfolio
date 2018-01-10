@@ -572,12 +572,14 @@ footer {
 @media (max-width: 344px) {
   .section-header .heading {
     font-size: 19pt; }
-  #work .timeline .container-timeline .content .date {
-    font-size: 10pt; }
-  #work .timeline .container-timeline .content h3 {
-    font-size: 12pt; }
-  #work .timeline .container-timeline .content p {
-    font-size: 8pt; }
+  #work .timeline .container-timeline .content {
+    padding: 20px 12px; }
+    #work .timeline .container-timeline .content .date {
+      font-size: 10pt; }
+    #work .timeline .container-timeline .content h3 {
+      font-size: 12pt; }
+    #work .timeline .container-timeline .content p {
+      font-size: 8pt; }
   #education .timeline .container-timeline .content h3 {
     font-size: 12pt; }
   footer .m-icon {
