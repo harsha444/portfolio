@@ -1,6 +1,6 @@
 $primary: #E31B6D;
 $primary-overlay: rgba(0, 0, 0, 0.8);
-$font: Raleway;
+$font: Raleway, cursive, sans-serif;
 $black: #1B242F;
 $black2: #444649;
 $black3: #616161;
@@ -15,6 +15,7 @@ $violet-dark: #1E242C;
 
 body {
     font-family: $font;
+    overflow-x: hidden;
 }
 
 .highlight {
